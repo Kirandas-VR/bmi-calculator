@@ -1,0 +1,41 @@
+<div style="background-color: grey;">
+<div class="container w-50" >
+    <h2 class="text-center">BMI Calculator</h2>
+    <form style="background-color: white;" class="p-4 shadow rounded" (ngSubmit)="calculateBMI()">
+      <div class="mb-3">
+        <label for="weight" class="form-label">Weight (kg):</label>
+        <input
+          type="number"
+          id="weight"
+          [(ngModel)]="weight"
+          name="weight"
+          class="form-control"
+          placeholder="Enter your weight"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="height" class="form-label">Height (cm):</label>
+        <input
+          type="number"
+          id="height"
+          [(ngModel)]="height"
+          name="height"
+          class="form-control"
+          placeholder="Enter your height"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-dark w-25 text-center">Calculate BMI</button>
+    </form>
+  
+    <div *ngIf="bmi !== null" class="mt-4 p-3 text-center">
+      <h4>Your BMI: {{ bmi | number: '1.1-1' }}</h4>
+      <p class="mt-2">Category: <strong>{{ category }}</strong></p>
+    </div>
+
+    <div class="row">
+        <img src="https://lirp.cdn-website.com/69c0b277/dms3rep/multi/opt/Body+Mass+Index+-+BMI+classification-640w.jpg" alt="">
+    </div>
+  </div>
+</div>

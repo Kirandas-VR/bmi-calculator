@@ -1,0 +1,38 @@
+<div class="row" style="background-color: grey;">
+    <div class="col-6">
+      <img class="ms-4"
+        src="https://img.freepik.com/premium-vector/user-login-flat-style-design-vector-illustration-stock-illustration_357500-518.jpg"
+        height="400px"
+        alt="Login Illustration"
+      />
+    </div>
+    <div class="col-6">
+        <h1 class="mt-4 ms-2">Login form</h1>
+      <form class="p-2" (submit)="login()">
+        <input
+          [(ngModel)]="email"
+          name="email"
+          type="email"
+          placeholder="Email"
+          class="form-control mb-3"
+          required
+        />
+        <input
+          [(ngModel)]="password"
+          name="password"
+          type="password"
+          placeholder="Password"
+          class="form-control mb-3"
+          required
+        />
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary m-5">Login</button>
+          <p>
+            New to here?
+            <a [routerLink]="['/register']" class="text-primary">Register Now</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+  
